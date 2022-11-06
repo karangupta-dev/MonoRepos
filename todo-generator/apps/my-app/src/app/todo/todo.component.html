@@ -1,8 +1,8 @@
-<!-- <mat-form-field>
+ <mat-form-field>
 	<input matInput placeholder="Add new task" #newtaskinput>
 </mat-form-field>
-<button [disabled]="newtaskinput.value == ''" mat-raised-button color="primary" (click)="addTask(newtaskinput.value); newtaskinput.value = ''">Add</button>
-<mat-card *ngIf="tasks.length > 0">
+<button [disabled]="newtaskinput.value === ''" mat-raised-button color="primary" (click)="addTask(newtaskinput.value); newtaskinput.value = ''">Add</button>
+<mat-card *ngIf="tasks.length">
 	<mat-list>
 		<mat-list-item *ngFor="let task of tasks;let i = index">
 			<mat-divider *ngIf="i != 0"></mat-divider>
@@ -14,5 +14,4 @@
 		</button>
 		</mat-list-item>
 	</mat-list>
-</mat-card> -->
-Hi
+</mat-card>
