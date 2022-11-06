@@ -2,16 +2,23 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { NxWelcomeComponent } from './nx-welcome.component';
 import { RouterModule } from '@angular/router';
+import { ToDoComponent } from './todo/todo.component';
+import { CustomMaterialModule } from '../material.module';
+
+export const COMPONENTS = [
+  AppComponent,
+  ToDoComponent
+];
 
 @NgModule({
-  declarations: [AppComponent, NxWelcomeComponent],
+  declarations: [COMPONENTS],
   imports: [
     BrowserModule,
     RouterModule.forRoot([], { initialNavigation: 'enabledBlocking' }),
+    CustomMaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
